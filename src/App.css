@@ -3,6 +3,11 @@
   src: url(../public/Modern\ Love.ttf);
 }
 
+@font-face {
+  font-family: 'Cavolini';
+  src: url(../public/CAVOLINI.TTF);
+}
+
 main {
   display: grid;
 }
@@ -19,16 +24,30 @@ body {
 /*////////////////////  HEADER  ////////////////////////*/
 
 h1,
-h2,
 legend,
 #menu {
   font-family: 'Modern Love';
   font-size: 30px;
 }
 
+h2 {
+  margin: 5%;
+}
+
+h2,
+p {
+  font-family: 'Cavolini';
+  color: gray;
+}
+
+p {
+  font-size: 20px;
+}
+
 h1 {
   font-size: 50px;
 }
+
 #menu {
   color: rgb(132, 132, 132);
 }
@@ -71,7 +90,7 @@ footer {
   background-position: center;
   color: white;
   font-size: 21px;
-  font-family: var(--e-global-typography-text-font-family), Sans-serif;
+  font-family: 'Cavolini';
   font-weight: 600;
 }
 
@@ -131,8 +150,8 @@ button {
   color: white;
   font-size: 19px;
   color: white;
-  font-family: var(--e-global-typography-accent-font-family), Sans-serif;
   font-weight: 600;
+  font-family: 'Cavolini';
 }
 
 input,
@@ -141,8 +160,7 @@ input::placeholder,
 textarea::placeholder {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.75);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Cavolini';
 }
 
 textarea:focus,
@@ -155,9 +173,33 @@ textarea {
 }
 
 /*/////////////////////////  INICIO   ////////////////// */
+.pLeft {
+  margin-right: 5%;
+  text-align: right;
+}
+
 .portada {
-  width: auto;
-  max-width: 15000px;
-  height: auto;
-  max-height: 100px;
+  width: 100%;
+}
+.playa {
+  width: 60%;
+}
+
+.container-img {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  position: relative;
+}
+
+.container-playa {
+  grid-column: 2 / span 7;
+  grid-row: 1;
+  padding-top: 40%;
+  z-index: 1;
+}
+
+.container-portada {
+  grid-column: 4 / -2;
+  grid-row: 1;
 }

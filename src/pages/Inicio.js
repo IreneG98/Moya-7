@@ -1,15 +1,23 @@
 import portada from '../images/portada.jpg';
+import playa from '../images/playa.png';
 
 export const Inicio = () => {
   return (
     <section>
       <h2>Si quieres vivir a 200 metros de la playa…</h2>
-      <img className="portada" src={portada} alt="h"></img>
-      <p>
+
+      <p className="pLeft">
         Estudios y apartamentos de 1 y 2 dormitorios en los que los materiales
         elegidos harán el deleite de sus moradores.
       </p>
-      <img alt="h"></img>
+      <div className="container-img">
+        <div className="container-portada">
+          <img className="portada" src={portada} alt="fachada edificio"></img>
+        </div>
+        <div className="container-playa">
+          <img className="playa" src={playa} alt="playa del palo"></img>
+        </div>
+      </div>
       <p>
         Con una ubicación privilegiada, a 3 minutos paseando de la playa y del
         Paseo Marítimo.
